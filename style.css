@@ -6,11 +6,20 @@
 
 body{
     overflow-x: hidden;
+    font-weight: 16px;
+    font-family: 'Red Hat Display', arial;
+}
+
+h1{
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .container{
-    height: 100vh;
-    width: 100%;
+    max-width: 1440px;
+    width: 100vw;
     background-image: url('./images/pattern-background-desktop.svg');
     background-repeat: repeat-x;
     display: flex;
@@ -20,18 +29,32 @@ body{
 }
 
 .card{
+    margin: 2rem;
     background-color: white;
-    width: 300px;
+    width: 440px;
     border-radius: 1.2rem;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
+    box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
 }
 
-.summary, .process-btn{
+.summary{
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+}
+
+.summary p{
+    color: hsl(224, 23%, 55%);
+    letter-spacing: 1px;
+}
+
+.process-btn{
     margin: 2rem;
 }
 
@@ -40,9 +63,79 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 1rem;
+    margin-top: 1rem;
+    background-color: hsl(225, 100%, 98%);
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+}
+
+.annual-plan a{
+    color: hsl(245, 75%, 52%);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.annual-plan a:hover{
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.6);
 }
 
 .plan{
     display: flex;
+    line-height: 1.6rem;
 }
+
+.plan p{
+    margin-left: 1rem;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+
+.plan span{
+    font-weight: 300;
+    color: hsl(224, 23%, 55%);
+}
+
+.process-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.process-btn a{
+    text-decoration: none;
+}
+
+.process-btn .proceed{
+    background-color: hsl(245, 75%, 52%);
+    padding: 1rem 6rem;
+    border-radius: 0.6rem;
+    color: hsl(225, 100%, 98%);
+    box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 6px 6px 21px 0px rgba(0,0,0,0.41);
+}
+
+.process-btn .proceed:hover{
+    background-color: hsla(245, 75%, 52%, 0.8);
+}
+
+.process-btn .cancel{
+    font-weight: 900;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+}
+
+.process-btn .cancel:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 375px) {
+    /* For mobile phones: */
+    .card{
+        width: 350px;
+    }
+  }
